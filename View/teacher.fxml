@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:controller="sample.Controller.TeacherController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="132.0" BorderPane.alignment="CENTER">
+         <children>
+            <ListView onMouseClicked="#handleClickMainList" prefWidth="200.0" fx:id="courseListView"/>
+            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="184.0" text="Delete" />
+            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="237.0" text="Add" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <ScrollPane fx:id="coursePane" fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <content>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

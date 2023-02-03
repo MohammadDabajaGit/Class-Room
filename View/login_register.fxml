@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:controller="sample.Controller.LoginRegisterController" alignment="CENTER"  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <tabs>
+          <Tab text="login">
+              <GridPane fx:id="loginPane">
+                  <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                  <children>
+                      <Label text="Email" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.halignment="CENTER"/>
+                      <TextField fx:id="loginEmail" promptText="Email" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.columnSpan="3" GridPane.halignment="CENTER" />
+
+                      <Label text="Password" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.halignment="CENTER"/>
+                      <PasswordField fx:id="loginPassword" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="3" GridPane.halignment="CENTER"/>
+
+                      <Label text="login as" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.halignment="CENTER"/>
+                      <fx:define>
+                          <ToggleGroup fx:id="loginRole"/>
+                      </fx:define>
+                      <RadioButton fx:id="loginStudent" GridPane.columnIndex="1" GridPane.rowIndex="2" toggleGroup="$loginRole" text="student" GridPane.halignment="CENTER" selected="true"/>
+                      <RadioButton fx:id="loginTeacher" GridPane.columnIndex="2" GridPane.rowIndex="2" toggleGroup="$loginRole" text="teacher" GridPane.halignment="CENTER"/>
+                      <RadioButton fx:id="loginAdmin" GridPane.columnIndex="3" GridPane.rowIndex="2" toggleGroup="$loginRole" text="admin" GridPane.halignment="CENTER"/>
+
+                      <Button text="login" onAction="#login" GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="4" GridPane.halignment="CENTER"/>
+                  </children>
+              </GridPane>
+          </Tab>
+          <Tab text="register">
+              <GridPane fx:id="registerPane">
+                  <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                  <children>
+                     <Label text="Name" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.halignment="CENTER"/>
+                     <TextField fx:id="registerName" promptText="Name" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER"/>
+
+                      <Label text="Email" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.halignment="CENTER"/>
+                      <TextField fx:id="registerEmail" promptText="Email" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" />
+
+                      <Label text="Password" GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.halignment="CENTER"/>
+                      <PasswordField fx:id="registerPassword" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.columnSpan="2" GridPane.halignment="CENTER"/>
+
+                      <Label text="Register as" GridPane.columnIndex="0" GridPane.rowIndex="6" GridPane.halignment="CENTER"/>
+                      <fx:define>
+                          <ToggleGroup fx:id="registerRole"/>
+                      </fx:define>
+                      <RadioButton fx:id="registerStudent" GridPane.columnIndex="1" GridPane.rowIndex="6" toggleGroup="$registerRole" text="student" GridPane.halignment="CENTER" selected="true"/>
+                      <RadioButton fx:id="registerTeacher" GridPane.columnIndex="2" GridPane.rowIndex="6" toggleGroup="$registerRole" text="teacher" GridPane.halignment="CENTER"/>
+
+                      <Button text="register" onAction="#register" GridPane.columnIndex="0" GridPane.rowIndex="8" GridPane.columnSpan="3" GridPane.halignment="CENTER"/>
+                  </children>
+              </GridPane>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</GridPane>

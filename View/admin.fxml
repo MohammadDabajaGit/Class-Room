@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.collections.FXCollections?>
+<BorderPane fx:controller="sample.Controller.AdminController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+          <tabs>
+
+              <Tab text="Student">
+                  <content>
+                      <TableView fx:id="studentTableView">
+                          <columns>
+                              <TableColumn minWidth="200" text="name">
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="name" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn minWidth="200" text="email">
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="email" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn minWidth="100" text="active">
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="active" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                          </columns>
+                          <items>
+                              <FXCollections fx:id="students" fx:factory="observableArrayList" />
+                          </items>
+                      </TableView>
+                  </content>
+              </Tab>
+              <Tab text="Teacher">
+                  <content>
+                      <TableView fx:id="teacherTableView">
+                          <columns>
+                              <TableColumn minWidth="200" text="name">
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="name" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn minWidth="200" text="email">
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="email" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn minWidth="100" text="active">
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="active" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                          </columns>
+                          <items>
+                              <FXCollections fx:id="teachers" fx:factory="observableArrayList" />
+                          </items>
+                      </TableView>
+                  </content>
+              </Tab>
+              <Tab text="Course">
+                  <content>
+                      <TableView fx:id="courseTableView">
+                          <columns>
+                              <TableColumn minWidth="200" text="name">
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="name" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn minWidth="100" text="time">
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="time" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn minWidth="100" text="active">
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="active" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                          </columns>
+                          <items>
+                              <FXCollections fx:id="courses" fx:factory="observableArrayList" />
+                          </items>
+                      </TableView>
+                  </content>
+              </Tab>
+          </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
